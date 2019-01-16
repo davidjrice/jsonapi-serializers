@@ -387,7 +387,7 @@ module JSONAPI
     def self.single_error(attribute, message)
       {
         'source' => {
-          'pointer' => "/data/attributes/#{format_name(attribute)}"
+          'pointer' => "/data/attributes/#{attribute.underscore}"
         },
         'detail' => message
       }
